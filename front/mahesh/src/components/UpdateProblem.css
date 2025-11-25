@@ -1,0 +1,190 @@
+/* Container */
+.update-container {
+    margin: 0 auto;
+    padding: 1.5rem;
+    max-width: 900px;
+  }
+  
+  /* Page title */
+  .update-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Card sections */
+  .update-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Sub-headings */
+  .update-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form controls */
+  .update-form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .update-input,
+  .update-textarea,
+  .update-select {
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .update-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .update-error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Test cases */
+  .update-testcase {
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #fafafa;
+  }
+  
+  /* Buttons */
+  .update-btn {
+    display: inline-block;
+    background: #2563eb; /* blue */
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .update-btn:hover {
+    background: #1d4ed8;
+  }
+  
+  .update-btn-error {
+    background: #dc2626;
+  }
+  
+  .update-btn-error:hover {
+    background: #b91c1c;
+  }
+  
+  .update-btn-full {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Code block */
+  .update-code {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .update-code textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: monospace;
+    font-size: 0.95rem;
+    resize: vertical;
+  }
+  
+  /* Container */
+  .updatepage-container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1000px;
+  }
+  
+  /* Table */
+  .updatepage-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .updatepage-header {
+    text-align: left;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #e5e7eb;
+    color: #374151;
+  }
+  
+  .updatepage-row {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.2s;
+  }
+  
+  .updatepage-row:hover {
+    background: #f9fafb;
+  }
+  
+  .updatepage-cell {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #111827;
+  }
+  
+  /* Problem title */
+  .updatepage-title {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .updatepage-title:hover {
+    text-decoration: underline;
+  }
+  
+  /* Difficulty colors */
+  .updatepage-difficulty {
+    font-weight: 500;
+  }
+  
+  .updatepage-difficulty.easy {
+    color: #22c55e; /* green */
+  }
+  .updatepage-difficulty.medium {
+    color: #eab308; /* yellow */
+  }
+  .updatepage-difficulty.hard {
+    color: #ef4444; /* red */
+  }
+  
+  /* Tag pill */
+  .updatepage-tag {
+    display: inline-block;
+    background: #f3f4f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    color: #374151;
+  }

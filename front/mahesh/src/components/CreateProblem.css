@@ -1,0 +1,138 @@
+/* Main container */
+.admin-container {
+    max-width: 900px;          /* keeps form readable */
+    margin: 30px auto;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Page title */
+  .admin-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3748;
+  }
+  
+  /* Card-style section */
+  .admin-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section title inside each card */
+  .admin-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a202c;
+    border-left: 4px solid #3182ce;
+    padding-left: 10px;
+  }
+  
+  /* Form control block */
+  .admin-form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  /* Labels */
+  .admin-label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d3748;
+  }
+  
+  /* Inputs, textareas, selects */
+  .admin-input,
+  .admin-textarea,
+  .admin-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s;
+  }
+  
+  .admin-input:focus,
+  .admin-textarea:focus,
+  .admin-select:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+  }
+  
+  /* Textarea size */
+  .admin-textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  /* Error text */
+  .admin-error {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  
+  /* Test case block */
+  .admin-testcase {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #f9fafb;
+  }
+  
+  /* Code blocks */
+  .admin-code textarea {
+    width: 100%;
+    padding: 10px;
+    background: #f7fafc;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    resize: vertical;
+  }
+  
+  /* Buttons */
+  .admin-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #3182ce;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 8px 0;
+    transition: background 0.2s;
+  }
+  
+  .admin-btn:hover {
+    background: #2b6cb0;
+  }
+  
+  .admin-btn-error {
+    background: #e53e3e;
+  }
+  
+  .admin-btn-error:hover {
+    background: #c53030;
+  }
+  
+  .admin-btn-full {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
