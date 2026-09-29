@@ -1,0 +1,141 @@
+.cp-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 20, 25, 0.92);
+  border-bottom: 1px solid var(--cp-border);
+  backdrop-filter: blur(12px);
+}
+
+.cp-navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cp-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cp-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cp-text);
+  text-decoration: none;
+}
+
+.cp-brand-accent {
+  color: var(--cp-accent);
+}
+
+.cp-brand-icon {
+  color: var(--cp-accent);
+}
+
+.cp-nav-links {
+  display: none;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .cp-nav-links {
+    display: flex;
+  }
+}
+
+.cp-nav-link {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cp-text-muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.cp-nav-link:hover,
+.cp-nav-link-active {
+  color: var(--cp-accent);
+  background: var(--cp-accent-dim);
+}
+
+.cp-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.cp-user-btn:hover {
+  background: var(--cp-accent-dim);
+}
+
+.cp-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cp-accent), var(--cp-accent-hover));
+  color: #042f2e;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.cp-user-name {
+  color: var(--cp-text);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+  .cp-user-name {
+    display: none;
+  }
+}
+
+.cp-dropdown-menu {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  min-width: 180px;
+  background: var(--cp-bg-card) !important;
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  box-shadow: var(--cp-shadow);
+}
+
+.cp-dropdown-menu li a,
+.cp-dropdown-menu li button {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  color: var(--cp-text);
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cp-dropdown-menu li a:hover,
+.cp-dropdown-menu li button:hover {
+  background: var(--cp-accent-dim);
+  color: var(--cp-accent);
+}

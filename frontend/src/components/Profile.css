@@ -1,0 +1,545 @@
+/* LeetCode-inspired profile layout */
+
+.lc-profile {
+  min-height: calc(100vh - 57px);
+  background: var(--cp-bg);
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.lc-profile-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lc-profile-loading {
+  text-align: center;
+  padding: 4rem;
+  color: var(--cp-text-muted);
+}
+
+.lc-profile-error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--cp-text-muted);
+}
+
+.lc-profile-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+}
+
+.lc-profile-banner-own {
+  justify-content: space-between;
+  border-color: rgba(45, 212, 191, 0.35);
+  background: var(--cp-accent-dim);
+}
+
+.lc-banner-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--cp-text-muted);
+}
+
+.lc-banner-text strong {
+  color: var(--cp-text);
+}
+
+.lc-back-btn,
+.lc-copy-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--cp-border);
+  background: var(--cp-bg-elevated);
+  color: var(--cp-text);
+  text-decoration: none;
+}
+
+.lc-back-btn:hover,
+.lc-copy-link-btn:hover {
+  border-color: var(--cp-accent);
+  color: var(--cp-accent);
+}
+
+.lc-email-muted {
+  font-style: italic;
+}
+
+/* —— Header row —— */
+.lc-profile-header {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .lc-profile-header {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lc-user-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  box-shadow: var(--cp-shadow);
+}
+
+.lc-avatar {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #00b8a3, #14b8a6);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(0, 184, 163, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 184, 163, 0.25);
+}
+
+.lc-username {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cp-text);
+  letter-spacing: -0.02em;
+}
+
+.lc-email {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  color: var(--cp-text-muted);
+}
+
+.lc-quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--cp-text-muted);
+}
+
+.lc-quick-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lc-quick-stats svg {
+  color: var(--cp-accent);
+}
+
+/* Stats card — ring + bars */
+.lc-stats-card {
+  padding: 1.35rem 1.5rem;
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  box-shadow: var(--cp-shadow);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .lc-stats-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.lc-stats-ring-wrap {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lc-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.lc-ring-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--cp-bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lc-ring-num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cp-text);
+  line-height: 1;
+}
+
+.lc-ring-label {
+  font-size: 0.75rem;
+  color: var(--cp-text-muted);
+  margin-top: 0.15rem;
+}
+
+.lc-ring-caption {
+  font-size: 0.8rem;
+  color: var(--cp-text-muted);
+  text-align: center;
+}
+
+.lc-ring-caption strong {
+  color: var(--cp-text);
+}
+
+.lc-difficulty-bars {
+  flex: 1;
+  min-width: 0;
+}
+
+.lc-difficulty-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cp-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lc-bar-row {
+  margin-bottom: 0.65rem;
+}
+
+.lc-bar-row:last-child {
+  margin-bottom: 0;
+}
+
+.lc-bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.lc-bar-easy .lc-bar-header span:first-child { color: #00b8a3; }
+.lc-bar-medium .lc-bar-header span:first-child { color: #ffc01e; }
+.lc-bar-hard .lc-bar-header span:first-child { color: #ff375f; }
+
+.lc-bar-count {
+  color: var(--cp-text-muted);
+  font-weight: 500;
+}
+
+.lc-bar-track {
+  height: 8px;
+  background: var(--cp-bg-elevated);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lc-bar-easy .lc-bar-fill { background: #00b8a3; }
+.lc-bar-medium .lc-bar-fill { background: #ffc01e; }
+.lc-bar-hard .lc-bar-fill { background: #ff375f; }
+
+.lc-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.lc-stat-pills {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--cp-border);
+}
+
+.lc-stat-pill {
+  flex: 1;
+  text-align: center;
+  padding: 0.65rem;
+  background: var(--cp-bg-elevated);
+  border-radius: 10px;
+}
+
+.lc-stat-pill-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.lc-stat-pill-label {
+  font-size: 0.7rem;
+  color: var(--cp-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* —— Fixed scroll panels —— */
+.lc-profile-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .lc-profile-lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lc-panel {
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  box-shadow: var(--cp-shadow);
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.lc-panel-head {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.15rem;
+  background: var(--cp-bg-elevated);
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.lc-panel-head h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cp-text);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lc-panel-head h2 svg {
+  color: var(--cp-accent);
+  opacity: 0.9;
+}
+
+.lc-panel-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--cp-accent-dim);
+  color: var(--cp-accent);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+}
+
+.lc-panel-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cp-border) transparent;
+}
+
+.lc-panel-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lc-panel-scroll::-webkit-scrollbar-thumb {
+  background: var(--cp-border);
+  border-radius: 6px;
+}
+
+.lc-panel-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--cp-accent);
+}
+
+.lc-panel-empty {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: var(--cp-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Submission rows */
+.lc-submission-list,
+.lc-solved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lc-submission-row {
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--cp-border);
+  transition: background 0.15s;
+}
+
+.lc-submission-row:hover {
+  background: var(--cp-accent-dim);
+}
+
+.lc-submission-row:last-child {
+  border-bottom: none;
+}
+
+.lc-submission-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.lc-problem-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cp-text);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.lc-problem-link:hover {
+  color: var(--cp-accent);
+}
+
+.lc-problem-link-static {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cp-text);
+}
+
+.lc-submission-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.lc-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.75rem;
+}
+
+.lc-status-accepted {
+  background: rgba(0, 184, 163, 0.15);
+  color: #00b8a3;
+}
+
+.lc-status-wrong,
+.lc-status-error {
+  background: rgba(255, 55, 95, 0.12);
+  color: #ff375f;
+}
+
+.lc-status-pending {
+  background: rgba(255, 192, 30, 0.15);
+  color: #ffc01e;
+}
+
+.lc-time {
+  color: var(--cp-text-muted);
+  white-space: nowrap;
+}
+
+/* Solved rows */
+.lc-solved-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 1.15rem;
+  border-bottom: 1px solid var(--cp-border);
+  transition: background 0.15s;
+}
+
+.lc-solved-row:hover {
+  background: var(--cp-accent-dim);
+}
+
+.lc-solved-row:last-child {
+  border-bottom: none;
+}
+
+.lc-solved-row .lc-problem-link {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Difficulty badges — LeetCode colors */
+.lc-diff-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+.lc-diff-easy {
+  background: rgba(0, 184, 163, 0.18);
+  color: #00b8a3;
+}
+
+.lc-diff-medium {
+  background: rgba(255, 192, 30, 0.18);
+  color: #ffc01e;
+}
+
+.lc-diff-hard {
+  background: rgba(255, 55, 95, 0.15);
+  color: #ff375f;
+}

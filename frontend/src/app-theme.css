@@ -1,0 +1,154 @@
+/* CodePrep app theme — shared across authenticated pages */
+
+:root {
+  --cp-bg: #0f1419;
+  --cp-bg-elevated: #1a2332;
+  --cp-bg-card: #1e293b;
+  --cp-border: #334155;
+  --cp-text: #f1f5f9;
+  --cp-text-muted: #94a3b8;
+  --cp-accent: #2dd4bf;
+  --cp-accent-hover: #14b8a6;
+  --cp-accent-dim: rgba(45, 212, 191, 0.15);
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-success: #4ade80;
+  --cp-easy: #4ade80;
+  --cp-medium: #fbbf24;
+  --cp-hard: #f87171;
+  --cp-radius: 12px;
+  --cp-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--cp-bg);
+  color: var(--cp-text);
+}
+
+.app-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.app-page-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.page-hero {
+  margin-bottom: 1.75rem;
+}
+
+.page-hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cp-text);
+  margin: 0 0 0.35rem;
+}
+
+.page-hero p {
+  color: var(--cp-text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cp-card {
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  box-shadow: var(--cp-shadow);
+}
+
+.cp-input,
+.cp-select {
+  background: var(--cp-bg-elevated);
+  border: 1px solid var(--cp-border);
+  color: var(--cp-text);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cp-input:focus,
+.cp-select:focus {
+  outline: none;
+  border-color: var(--cp-accent);
+  box-shadow: 0 0 0 3px var(--cp-accent-dim);
+}
+
+.cp-input::placeholder {
+  color: #64748b;
+}
+
+.cp-btn-primary {
+  background: linear-gradient(135deg, var(--cp-accent), var(--cp-accent-hover));
+  color: #042f2e;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.cp-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.35);
+}
+
+.cp-btn-ghost {
+  background: transparent;
+  border: 1px solid var(--cp-border);
+  color: var(--cp-text-muted);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.cp-btn-ghost:hover {
+  border-color: var(--cp-accent);
+  color: var(--cp-accent);
+}
+
+.badge-easy {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--cp-easy);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.badge-medium {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--cp-medium);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+.badge-hard {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--cp-hard);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+.badge-tag {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.badge-solved {
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--cp-accent);
+  border: 1px solid rgba(45, 212, 191, 0.4);
+}
+
+.difficulty-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}

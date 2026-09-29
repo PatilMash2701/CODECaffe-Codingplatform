@@ -1,0 +1,112 @@
+.delete-problem-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.delete-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cp-text);
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+.delete-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--cp-danger);
+  border-radius: 2px;
+}
+
+.problem-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--cp-bg-card);
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--cp-shadow);
+}
+
+.problem-table th,
+.problem-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cp-border);
+  color: var(--cp-text);
+}
+
+.problem-table th {
+  background: var(--cp-bg-elevated);
+  color: var(--cp-text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.problem-table tr:hover {
+  background: var(--cp-accent-dim);
+}
+
+.title {
+  color: var(--cp-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background: rgba(248, 113, 113, 0.2);
+  color: var(--cp-danger);
+  border: 1px solid var(--cp-danger);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: rgba(248, 113, 113, 0.35);
+}
+
+.difficulty.easy {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--cp-easy);
+}
+.difficulty.medium {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--cp-medium);
+}
+.difficulty.hard {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--cp-hard);
+}
+
+.difficulty {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tag {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
